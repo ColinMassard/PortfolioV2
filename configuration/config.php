@@ -1,0 +1,9 @@
+<?php
+    $hote='localhost';
+    $port='3308';
+    $nom_bd='portfoliov2';
+    $identifiant='root';
+    $mot_de_passe='';
+    $encodage='utf8';
+    $debug=true;
+?>
