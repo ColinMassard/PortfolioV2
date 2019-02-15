@@ -1,9 +1,0 @@
-<?php
-    $hote='db759068775.hosting-data.io';
-    $port='3306';
-    $nom_bd='db759068775';
-    $identifiant='dbo759068775';
-    $mot_de_passe='MassardColin04081999';
-    $encodage='utf8';
-    $debug=true;
-?>
