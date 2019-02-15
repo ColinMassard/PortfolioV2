@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
 <head>
+  <meta name="author" content="Colin Massard">
+  <meta name="keywords" content="Intégrateur,Front-End,Colin,Massard,ColinMassard,HTML,CSS,JS,jQuery,Canvas">
+  <meta name="description" content="Je m'appelle Colin Massard,j'ai 19 ans, je suis Développeur & Intrégateur web au Puy en Velay en Auvergne, Voici mon portfolio et CV.  Vous trouverez ici mes dernières créations en design et en code HTML5/CSS3 et bien d'autres languages.">
+
   <meta charset="utf-8">
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" type="image/png" href="img/favicon.png">
@@ -11,7 +15,7 @@
   <?php
   include("configuration/config.php");
   include("includes/connection.php");
-  $requete = "SELECT id, img_petite, img_grande, texte_petit, texte_grand, titre FROM REALISATIONS";
+  $requete = "SELECT id, img_petite, img_grande, texte_petit, texte_grand, titre, lien FROM REALISATIONS";
   $resultats=$connection->query($requete);
   $tableau=$resultats->fetchAll(PDO::FETCH_OBJ);
   $resultats->closeCursor();
@@ -28,11 +32,12 @@
     </ul>
 
   </div>
+
   <div class="sliderreal">
     <ul>
       <?php
       foreach ($tableau as $ligne) {
-        echo "<li><img src='".$ligne->img_grande."' id=image'".$ligne->id."'></li>";}
+        echo "<li><a href='".$ligne->lien."' target='_blank'><img src='".$ligne->img_grande."' id=image'".$ligne->id."'></a></li>";}
       ?>
 
 

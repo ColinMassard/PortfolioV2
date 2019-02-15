@@ -1,0 +1,201 @@
+body,*{
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /*Application de la police a toute la page*/
+}
+.section{
+
+  height: 100vh;
+  display: grid; /*Création de la grille utilisé pour le placement du contenu*/
+  grid-template-columns: 7fr 5fr 1fr; /* Séparation de la grille en 3 colonnes de tailles différentes*/
+  grid-template-rows: 1fr 7fr 2fr 1fr; /* Séparation de la grille en 4 lignes de tailles différentes*/
+  grid-template-areas:  "h h h" /*Grille utilisé pour le découpage de la page */
+  "i p n"
+  "c c n"
+  "f f f";
+
+
+}
+
+.presentation{
+  grid-area:p;
+}
+.citation{grid-area:c;}
+.identite{grid-area:i;}
+#objet1, #objet2, #objet3 {
+  width: 70%;
+}
+
+H1#philippe{/* Philippe: */
+  font-weight: bold;
+  font-size:4.5vw;
+  left: 34.5vw;
+  top: 40vh;
+  color: #FFFFFF;
+  position: absolute;
+
+}
+H1#starck{/* Starck: */
+  font-weight: bold;
+  font-size: 3.5vw;
+  margin-left: 2.5vw;
+  margin-top: 27vh;
+  color: #E9511D;
+}
+
+.presentation p{
+  margin-left: 2.5vw;
+  margin-top: 2vh;
+  max-width: 25vw;
+  text-align: justify;
+  font-size: 1.25vw;
+}
+
+.CotesCitation{/* Starck: */
+  font-weight: bold;
+  font-size: 3vw;
+  font-style: normal;
+  color: #E9511D;
+}
+.citation{
+  font-style: italic;
+  font-size: 1.5vw;
+  margin-left: 40vw;
+}
+
+
+#main{
+
+  width: 100vw;
+  position: absolute;
+
+}
+
+#objet2{
+
+  position: absolute;
+  top:-5vh;
+  left: 5vw;
+
+
+}
+#objet2 img{
+  width: 48vw;
+
+}
+
+#objet3{
+  position: absolute;
+  top: 3vh;
+  left: 71vw;
+}
+
+#objet4{
+  position: absolute;
+  top: 20vh;
+  left: 68vw;
+}
+
+#objet5{
+  position: absolute;
+  top: 12vh;
+  left: 85vw;
+}
+
+
+
+
+#layer{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+}
+
+@media screen  and (orientation: portrait) {
+
+  body{
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../images/starckrspnvsb.png");
+    background-size: 55vh;
+    background-repeat: no-repeat;
+    background-position:0 -5vh ;
+  }
+
+  .section{
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:  "h n"
+    "p p"
+    "p p"
+    "f f";
+  }
+
+
+  #objet2{
+    display: none;
+  }
+  #layer{
+    display: none;
+  }
+
+  #objet1, #objet2{
+    display: none;
+  }
+  H1#philippe{/* Philippe: */
+    font-size: 5vh;
+    left: 11vw;
+    top: 47vh;
+  }
+
+  H1#starck{/* Philippe: */
+    font-size: 10vw;
+    margin-top: 45vh;
+    margin-left: 45vw;
+    color: #E9511D;
+  }
+
+
+  .presentation p{
+    margin-left: 45vw;
+    margin-top: 1vh;
+    max-width: 45vw;
+    font-size: 2vh;
+    text-align: justify;
+  }
+  .citation{
+    display: none;
+  }
+  #objet3{
+width: 60%;
+    top: -25vh;
+    left: -80%;
+  }
+  #objet4{
+width: 60%;
+    top: -10vh;
+    left:-45%;
+  }
+  #objet5{
+width: 60%;
+top: -35vh;
+left: -90%;
+  }
+}
+
+
+}
+
+
+@media screen  (min-width : 1500px) and (max-widht: 1920px) {
+
+
+
+  .identite #main #object2 img{
+    width: 100%;
+  }
+
+
+}

@@ -1,0 +1,48 @@
+  body,*{
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /*Application de la police a toute la page*/
+  }
+
+  .header{ /*Attribution du contenu de la page a des catégorie de grille prédéfinies */
+  grid-area:h;
+  z-index: 3;
+  }
+
+
+
+  header a:link, header a:visited{
+  color: #E9511D;
+  text-decoration: none;
+  letter-spacing: 0.075rem;
+
+  }
+
+  header a, header logo{
+  display: inline-block;
+
+
+  }
+  header a:nth-of-type(2){
+  float: right;
+  margin-right: 10vw;
+  margin-top: 4vh;
+  }
+  header a> img{
+  width: 7.5vw;
+  margin-left: 1vw;
+  margin-top: 1.5vh;
+  }
+
+@media screen  and (orientation: portrait) {
+
+  header a:nth-of-type(2){
+  display: none;
+  }
+
+  header > a > img{
+  width: 40%;
+  margin-left:2vw;
+  margin-top: 2vh;
+  }
+}

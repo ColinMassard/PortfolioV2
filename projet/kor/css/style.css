@@ -1,0 +1,110 @@
+body,*{
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /*Application de la police a toute la page*/
+
+
+}
+
+body{
+
+    background-image: url("../images/Background.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 55vw;
+
+}
+.section{
+
+  height: 100vh;
+  display: grid; /*Création de la grille utilisé pour le placement du contenu*/
+  grid-template-columns: 1fr 1fr; /* Séparation de la grille en 3 colonnes de tailles différentes*/
+  grid-template-rows: 1fr 8fr 1fr; /* Séparation de la grille en 4 lignes de tailles différentes*/
+  grid-template-areas:  "h h" /*Grille utilisé pour le découpage de la page */
+                        "c n"
+                        "f f";
+
+
+}
+
+.footer{
+  grid-area:f;
+  margin-left: 2.5vw;
+  margin-top: 1vw;
+  }
+
+  .content{
+  grid-area:c;
+  }
+  .nav{grid-area: n;
+    position:relative;
+    margin-left: 84.5%;
+  }
+
+.content h1{
+  font-size: 8vw;
+  margin-top:20vh;
+  margin-left: 10.5vw;
+}
+
+.content h3{
+  font-weight: normal;
+  /*margin-top: 2vh;*/
+  color: grey;
+  font-size: 1.5vw;
+  margin-left: 10.5vw;
+}
+
+
+  #container {
+    position: absolute;
+    top:10vh;
+    right: 2vw;
+    width: 70vw;
+    height: 90vh;
+    /*
+    background-color: rgba(255, 0, 0, 0.3);*/
+  }
+
+
+  @media screen  and (orientation: portrait) {
+    body{
+
+    background-image: url("../images/Background-responsive.png");
+    background-size: 45vh;
+    background-position: 50% 70%;
+
+
+    }
+      .section{
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:  "h n"
+                            "c c"
+                            "c c"
+                            "f f";
+      }
+
+      .nav{grid-area: n;
+        position:relative;
+        margin-left:0;
+      }
+
+      #main{
+      display: none;
+      }
+
+
+      .content h1{
+        font-size: 8vh;
+        margin-top:10vh;
+        margin-left: 20vw;
+      }
+
+      .content h3{
+        font-weight: normal;
+        color: white;
+        margin-top: 0vh;
+        font-size: 1.5vh;
+        margin-left: 20vw;
+      }
+  }

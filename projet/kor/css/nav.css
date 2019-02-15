@@ -1,0 +1,57 @@
+body,*{
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /*Application de la police a toute la page*/
+}
+.nav{grid-area: n;
+  position:relative;
+
+}
+  .nav ul{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+    z-index: 990;
+
+  }
+  .nav ul li, .nav ul li a{
+
+    writing-mode: vertical-rl;  /*Disposition verticale du menu */
+    text-orientation:mixed;
+    margin-top: 2vh;
+
+    margin-bottom: 2vh;
+    list-style-type: none;
+    text-decoration: none;
+    color: grey;
+
+    font-size:1.5vw;
+
+  }
+  #Lienactif{
+    color: black;
+
+  }
+  .nav ul li a:hover, #Lienactif:hover{
+    color: #E9511D;
+
+  }
+
+
+@media screen and (orientation:portrait){
+
+  .nav ul{
+  top: 50%;
+  transform: translate(0,-50%);
+  right: 0;
+  }
+
+  .nav ul li, .nav ul li a{
+  writing-mode: horizontal-tb;
+  display: inline-block;
+  font-size: 3vw;
+  margin: 0;
+  margin-left: 1vw;
+  }
+}

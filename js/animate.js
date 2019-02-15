@@ -2,7 +2,7 @@ $(document).ready(function(){
 
   setTimeout(function(){
 
-    $(".main").animate({top: -hauteur + "px"}, 1000);
+    $(".main").animate({top: -hauteur *2 + "px"}, 1000);
 
   }, 1500);
   setTimeout(function(){
@@ -117,7 +117,7 @@ $(document).ready(function(){
       $("#menuItem5").animate({bottom: "0px"}, 1000);
 
       setTimeout(function(){
-        $(".main").animate({top: -hauteur + "px"}, 1000);
+        $(".main").animate({top: -hauteur *2+ "px"}, 1000);
         $(".open").show();
       }, 1000);
 
